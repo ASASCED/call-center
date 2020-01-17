@@ -1,0 +1,10 @@
+<div class="card" (click)="cardSelected()">
+    <div class="top">
+        <h3>{{card.fullName | uppercase}}</h3>
+        <span>Quote: {{card.quoteNumberItc}}</span>
+    </div>
+    <p>Mobile: <span>{{card.cellPhone}}</span></p>
+    <p>Date: <span>{{card.createdOn}}</span></p>
+    <p>Type: <span>{{card.statusTypeName}}</span></p>
+    <p>Status: <span>{{card.active}}</span></p>
+</div>

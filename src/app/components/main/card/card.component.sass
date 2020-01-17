@@ -1,0 +1,39 @@
+@import 'variables'
+
+.card
+    background-color: #2c325d
+    cursor: pointer
+    flex-flow: 1
+    height: 10em
+    margin: .5em
+    border-radius: 1em
+    box-shadow: $box-shadow
+    display: flex
+    flex-direction: column
+    transition: all 0.2s
+
+    .top
+        padding: 1em
+        display: flex
+        justify-content: space-between
+
+        span
+            color: #6683e0
+
+    p
+        padding: 0 1em 0 1em
+        color: #6683e0
+
+        span
+            color: white
+
+.card:nth-child(even)
+    grid-column: 2
+
+.card:hover
+    box-shadow: $box-shadow-3d
+    transition: all 0.2s
+    
+.card:active
+    border: 2px solid darken(#2c325d, 10%)
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75)

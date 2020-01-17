@@ -1,0 +1,17 @@
+<div class="background"></div>
+<div class="grid">
+
+    <app-filters></app-filters>
+
+    <div class="cards">
+        <app-card (infoCard)="getCardSelected($event)" class="card" *ngFor="let card of cardsInfo" [card]="card">
+        </app-card>
+    </div>
+
+    <app-sidebar class="sidebar" [cardInfo]="cardInfo"></app-sidebar>
+
+    <div class="btn-float">
+        <button><i class="fas fa-plus"></i></button>
+    </div>
+
+</div>

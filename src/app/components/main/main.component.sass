@@ -1,0 +1,50 @@
+@import 'variables'
+    
+.grid
+    background-color: #24284b
+    height: 100vh
+    display: grid
+    grid-template-columns: 1fr 20%
+    grid-template-rows: 3em 1fr
+
+    .cards
+        display: grid
+        grid-template-columns: 1fr 1fr
+        margin-top: 1em
+        color: white
+        overflow-y: auto
+        max-height: 100vh
+
+        .card:last-child
+            margin-bottom: 8em
+
+    .cards::-webkit-scrollbar
+        width: 8px
+        height: 8px
+    .cards::-webkit-scrollbar-thumb
+        background: #ccc
+        border-radius: 4px
+    .cards::-webkit-scrollbar-thumb:active
+        background: #b3b3b3
+        box-shadow: $box-shadow
+
+    .sidebar
+        grid-column: 2
+        grid-row: 1/3
+
+    .btn-float
+        position: fixed
+        bottom: 1em
+        left: 1em
+
+        button
+            background-color: #ff395b
+            color: white
+            padding: 2em
+            border-radius: 50%
+
+        button:hover
+            transition: all .3s
+            background-color: white
+            color: #ff395b
+            cursor: pointer

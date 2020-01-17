@@ -1,0 +1,56 @@
+@import 'variables'
+
+.sidebar
+    display: flex
+    flex-direction: column
+
+    background-color: #282e54
+    color: white
+    padding: 1em
+    margin: 1em
+    border-radius: 1em 
+    box-shadow: $box-shadow
+    height: 95vh
+
+    .top
+        margin-bottom: 1em
+
+        input
+            width: 100%
+            margin-bottom: 1em
+            background-color: #373b5b
+            border-radius: .2em
+            padding: .2em
+            color: gray
+
+        figure
+            display: flex
+            justify-content: center
+            margin-bottom: 1em
+
+            img
+                width: 80%
+
+        h2
+            text-align: center
+        
+    .extra-info
+        font-size: 12pt
+
+        .info
+            color: $secondary-font-color
+
+    button
+        text-transform: uppercase
+        padding: 1em
+        background-color: #3e7cff
+        color: white
+        width: 100%
+        border-radius: .5em
+        margin-top: 2em
+
+    button:hover
+        transition: all .3s
+        background-color: white
+        color: #3e7cff
+        cursor: pointer
