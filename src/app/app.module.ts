@@ -9,6 +9,7 @@ import { FiltersComponent } from './components/main/filters/filters.component';
 import { SidebarComponent } from './components/main/sidebar/sidebar.component';
 import { CardsService } from './services/cards.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AddComponent } from './components/main/add/add.component';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
         CardComponent,
         FiltersComponent,
         SidebarComponent,
+        AddComponent,
     ],
     imports: [BrowserModule, APP_ROUTING, HttpClientModule],
     providers: [CardsService],

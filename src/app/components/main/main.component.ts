@@ -10,6 +10,7 @@ import { Cards } from '../../interfaces/main-interfaces';
 export class MainComponent implements OnInit {
     cardsInfo: Cards[];
     cardInfo: Cards;
+    buttonAdd = false;
 
     constructor(private cardsService: CardsService) {
         cardsService.getAppointments().subscribe((cardsInfo: any) => {
@@ -22,5 +23,9 @@ export class MainComponent implements OnInit {
 
     getCardSelected(event: Cards) {
         this.cardInfo = event;
+    }
+
+    buttonChangeAdd(): void {
+        this.buttonAdd = !this.buttonAdd;
     }
 }

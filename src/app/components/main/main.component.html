@@ -3,15 +3,22 @@
 
     <app-filters></app-filters>
 
-    <div class="cards">
+    <div class="cards" *ngIf="buttonAdd">
         <app-card (infoCard)="getCardSelected($event)" class="card" *ngFor="let card of cardsInfo" [card]="card">
         </app-card>
+    </div>
+
+    <div class="" *ngIf="!buttonAdd">
+        <app-add></app-add>
     </div>
 
     <app-sidebar class="sidebar" [cardInfo]="cardInfo"></app-sidebar>
 
     <div class="btn-float">
-        <button><i class="fas fa-plus"></i></button>
+        <button (click)="buttonChangeAdd()">
+            <i *ngIf="buttonAdd" class="fas fa-plus"></i>
+            <i *ngIf="!buttonAdd" class="fas fa-times"></i>
+        </button>
     </div>
 
 </div>
