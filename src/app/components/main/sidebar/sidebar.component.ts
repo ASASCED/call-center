@@ -8,11 +8,11 @@ import { CardsService } from '../../../services/cards.service';
     styleUrls: ['./sidebar.component.sass'],
 })
 export class SidebarComponent implements OnInit, OnChanges {
-    @Input() cardInfo: Cards;
+    @Input() cardInfo: Cards[];
 
     constructor(private cardsService: CardsService) {
-        cardsService.getAppointments().subscribe((cards: Cards[]) => {
-            this.cardInfo = cards[0];
+        cardsService.getAppointments(1, 1, 20).then((data: Cards[]) => {
+            this.cardInfo = data as Cards[];
         });
     }
 

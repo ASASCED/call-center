@@ -28,3 +28,37 @@ export interface Cards {
     idlogin: number;
     active: boolean;
 }
+
+export interface Quote {
+    idAppointment: number;
+    quoteNumberItc: number;
+    idLogin: number;
+    idContactSendHub: any;
+    firstName: string;
+    middleName: string;
+    lastname: string;
+    cellPhone: string;
+    homePhone: string;
+    idGender: any;
+    address: string;
+    city: string;
+    state: string;
+    zip: string;
+    idLanguage: number;
+    idOfficeFrom: number;
+    idOfficeTo: number;
+    idStatusType: any;
+    createdOn: string;
+    dateTimeAppointment: string;
+    usr: any;
+    csr: any;
+    lastUpdate: string;
+    idStatus: number;
+    custId: any;
+    expired: boolean;
+    sendSms: boolean;
+    active: any;
+    idStatusTypeNavigation: any;
+    logsAutoProcess: any[];
+    smslogs: any[];
+}

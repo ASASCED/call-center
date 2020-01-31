@@ -3,30 +3,99 @@
         <h3>General Info</h3>
         <div class="search">
             <label for="">Quote number</label>
-            <input type="number">
-            <button>Search</button>
+            <input type="number" (keyup.enter)="getQuote(quoteNumber.value)" #quoteNumber>
+            <button (click)="getQuote(quoteNumber.value)">Search</button>
         </div>
         <div class="info">
             <div class="element">
                 <label for="">First name</label>
-                <input type="text">
+                <input type="text" [value]="infoQuote.firstName" disabled>
             </div>
             <div class="element">
                 <label for="">Middle name</label>
-                <input type="text">
+                <input type="text" [value]="infoQuote.firstName" disabled>
             </div>
             <div class="element">
                 <label for="">Last name</label>
-                <input type="text">
+                <input type="text" [value]="infoQuote.firstName" disabled>
             </div>
             <div class="element">
-                <label for="">Home name</label>
-                <input type="text">
+                <label for="">Home phone</label>
+                <input type="text" [value]="infoQuote.firstName" disabled>
             </div>
             <div class="element">
-                <label for="">Cell name</label>
-                <input type="text">
+                <label for="">Cell phone</label>
+                <input type="text" [value]="infoQuote.firstName" disabled>
             </div>
         </div>
     </div>
+    <div class="general--info">
+        <h3>Customer Address</h3>
+        <div class="info">
+            <div class="element">
+                <label for="">Address</label>
+                <input type="text" [value]="infoQuote.firstName" disabled>
+            </div>
+            <div class="element">
+                <label for="">City</label>
+                <input type="text" [value]="infoQuote.firstName" disabled>
+            </div>
+            <div class="element">
+                <label for="">State</label>
+                <input type="text" [value]="infoQuote.firstName" disabled>
+            </div>
+            <div class="element">
+                <label for="">ZIP</label>
+                <input type="text" [value]="infoQuote.firstName" disabled>
+            </div>
+        </div>
+    </div>
+    <div class="post">
+        <h3>Appointment</h3>
+        <div class="info">
+            <div class="element">
+                <label for="">Lenguage</label>
+                <select>
+                    <option *ngFor="let lan of languages" value="{{lan.language1}}">{{lan.language1}}</option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="">Date/Time</label>
+                <input type="datetime-local">
+            </div>
+            <div class="element">
+                <label for="">Office to</label>
+                <select>
+                    <option *ngFor="let off of offices" value="{{off.officeName}}">{{off.officeName}}</option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="">Type</label>
+                <select>
+                    <option *ngFor="let ty of types" value="{{ty.statusTypeName}}">{{ty.statusTypeName}}
+                    </option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="">USR</label>
+                <input type="text">
+            </div>
+            <div class="element">
+                <label for="">CSR</label>
+                <input type="text">
+            </div>
+            <div class="element">
+                <label for="">Status</label>
+                <select>
+                    <option *ngFor="let st of status" value="{{st.statusAppointment1}}">{{st.statusAppointment1}}
+                    </option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="">Customer ID</label>
+                <input type="number">
+            </div>
+        </div>
+    </div>
+    <button class="add">add appointment</button>
 </div>

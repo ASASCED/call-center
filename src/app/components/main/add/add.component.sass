@@ -1,4 +1,9 @@
 @import 'variables'
+
+input, select
+    background-color: lighten($input-color, 20%)
+    color: white
+    padding: 0 .5em
     
 .add
     display: grid
@@ -6,11 +11,12 @@
     margin-top: 1em
 
     .general--info
+        box-shadow: $box-shadow
         color: white
         background-color: $card-background
         padding: 1em
         border-radius: 1em
-        margin: .5em .5em
+        margin: .5em .5em 0 .5em
         
         display: flex
         flex-direction: column
@@ -18,20 +24,54 @@
         .search
             display: flex
             justify-content: space-between
-            margin-bottom: 1em
             margin-top: 1em
 
             input
+                margin: 0 1em
                 width: 60%
                 border-radius: .2em
 
+            button
+                background-color: $button-color
+                color: white
+                padding: 0 1em
+                border-radius: .4em
+
+            button:hover
+                background-color: white
+                color: $button-color
+                transition: ease .3s
+                cursor: pointer
+
         .info
+            margin-top: 1em
 
             .element
                 display: flex
                 justify-content: space-between
                 margin-bottom: .5em
 
-                input
+                input, select
                     width: 70%
                     border-radius: .2em
+
+    .post
+        grid-column: 1/3
+        @extend .general--info
+
+    
+    .add
+        margin: 1em 1em
+        background-color: $button-secondary
+        padding: 1.5em 2em
+        grid-column: 2/3
+        color: white
+        text-transform: uppercase
+        border-radius: .5em
+        font-weight: bold
+
+    .add:hover 
+        background-color: white
+        color: $button-secondary
+        transition: ease .3s
+        cursor: pointer

@@ -13,9 +13,8 @@ export class MainComponent implements OnInit {
     buttonAdd = false;
 
     constructor(private cardsService: CardsService) {
-        cardsService.getAppointments().subscribe((cardsInfo: any) => {
-            console.log(cardsInfo);
-            this.cardsInfo = cardsInfo;
+        cardsService.getAppointments(1, 1, 20).then(data => {
+            this.cardsInfo = data;
         });
     }
 
