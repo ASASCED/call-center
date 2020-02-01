@@ -33,9 +33,8 @@ export class AddComponent implements OnInit {
     }
 
     getQuote(quote: string) {
-        console.log(quote);
         this.cardsService
-            .getQuoteInfo(String(quote))
+            .getQuoteInfo(quote)
             .then((data: Quote) => {
                 this.quoteInfo = data;
                 console.log(this.quoteInfo);

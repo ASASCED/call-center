@@ -8,17 +8,15 @@ import { CardsService } from '../../../services/cards.service';
     styleUrls: ['./sidebar.component.sass'],
 })
 export class SidebarComponent implements OnInit, OnChanges {
-    @Input() cardInfo: Cards[];
+    @Input() cardInfo: Cards;
 
     constructor(private cardsService: CardsService) {
-        cardsService.getAppointments(1, 1, 20).then((data: Cards[]) => {
-            this.cardInfo = data as Cards[];
+        cardsService.getAppointments(1, 1, 1).then((data: Cards[]) => {
+            this.cardInfo = data[0];
         });
     }
 
     ngOnInit() {}
 
-    ngOnChanges(): void {
-        console.log(this.cardInfo);
-    }
+    ngOnChanges(): void {}
 }

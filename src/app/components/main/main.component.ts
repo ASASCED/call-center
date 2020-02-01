@@ -10,7 +10,7 @@ import { Cards } from '../../interfaces/main-interfaces';
 export class MainComponent implements OnInit {
     cardsInfo: Cards[];
     cardInfo: Cards;
-    buttonAdd = false;
+    buttonAdd = true;
 
     constructor(private cardsService: CardsService) {
         cardsService.getAppointments(1, 1, 20).then(data => {
